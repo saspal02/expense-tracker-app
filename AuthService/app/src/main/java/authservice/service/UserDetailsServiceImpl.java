@@ -1,6 +1,7 @@
 package authservice.service;
 
 import authservice.entities.UserInfo;
+import authservice.eventProducer.UserInfoProducer;
 import authservice.model.UserInfoDto;
 import authservice.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -27,6 +28,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private final PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private final UserInfoProducer userInfoProducer;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserInfo user = userRepository.findByUsername(username);
@@ -50,6 +54,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         String userId = UUID.randomUUID().toString();
         userRepository.save(new UserInfo(userId,userInfoDto.getUsername(),
                 userInfoDto.getPassword(),new HashSet<>()));
+        userInfoProducer.sendEventToKafka(userInfoDto);
         return true;
 
     }
