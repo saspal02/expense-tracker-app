@@ -16,7 +16,7 @@ public class UserInfoSerializer implements Serializer<UserInfoDto> {
         try {
             retVal = objectMapper.writeValueAsString(userInfoDto).getBytes();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println("Can't Serialize");
         }
 
         return retVal;

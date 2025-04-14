@@ -28,11 +28,12 @@ public class AuthController
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
-    @PostMapping("auth/v1/signup")
+    @PostMapping("/auth/v1/signup")
     public ResponseEntity SignUp(@RequestBody UserInfoDto userInfoDto){
         try{
             Boolean isSignUpped = userDetailsService.signupUser(userInfoDto);
-            if(Boolean.FALSE.equals(isSignUpped)){
+
+            if (Boolean.FALSE.equals(isSignUpped)){
                 return new ResponseEntity<>("Already Exist", HttpStatus.BAD_REQUEST);
             }
             RefreshToken refreshToken = refreshTokenService.createRefreshToken(userInfoDto.getUsername());

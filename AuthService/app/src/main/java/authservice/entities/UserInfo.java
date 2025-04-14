@@ -1,5 +1,6 @@
 package authservice.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name= "users")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UserInfo {
 
     @Id

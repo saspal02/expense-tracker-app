@@ -1,6 +1,7 @@
 package authservice.service;
 
 import authservice.entities.UserInfo;
+import authservice.eventProducer.UserInfoEvent;
 import authservice.eventProducer.UserInfoProducer;
 import authservice.model.UserInfoDto;
 import authservice.repository.UserRepository;
@@ -17,9 +18,10 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.UUID;
 
-@Component
+
 @AllArgsConstructor
 @Data
+@Component
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
@@ -54,8 +56,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         String userId = UUID.randomUUID().toString();
         userRepository.save(new UserInfo(userId,userInfoDto.getUsername(),
                 userInfoDto.getPassword(),new HashSet<>()));
-        userInfoProducer.sendEventToKafka(userInfoDto);
+        userInfoProducer.sendEventToKafka(userInfoEventToPublish(userInfoDto,userId));
         return true;
 
+    }
+
+    private UserInfoEvent userInfoEventToPublish(UserInfoDto userInfoDto,String userId) {
+        return UserInfoEvent.builder()
+                .userId(userId)
+                .firstName(userInfoDto.getFirstName())
+                .lastName(userInfoDto.getLastName())
+                .email(userInfoDto.getEmail())
+                .phoneNumber(userInfoDto.getPhoneNumber())
+                .build();
     }
 }
