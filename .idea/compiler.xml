@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
@@ -12,13 +11,21 @@
         <module name="AuthService.app.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AuthService.app" options="-parameters" />
       <module name="AuthService.app.main" options="-parameters" />
       <module name="AuthService.app.test" options="-parameters" />
+      <module name="Datascience-service" options="-parameters" />
+      <module name="Datascience-service.main" options="-parameters" />
+      <module name="Datascience-service.test" options="-parameters" />
+      <module name="Expense-service" options="-parameters" />
+      <module name="Expense-service.main" options="-parameters" />
+      <module name="Expense-service.test" options="-parameters" />
+      <module name="Userservice.app" options="-parameters" />
+      <module name="Userservice.app.main" options="-parameters" />
+      <module name="Userservice.app.test" options="-parameters" />
     </option>
   </component>
 </project>

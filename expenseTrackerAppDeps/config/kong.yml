@@ -15,7 +15,7 @@ services:
         config:
           auth_service_url: "http://authservice:9898/auth/v1/ping" 
 
-  - name: data-science-service
+  - name: ds-service
     url: http://dsservice:8010
     routes:
       - name: ds-route
@@ -26,7 +26,7 @@ services:
     plugins:
       - name: custom-auth
         config:
-          auth_service_url: "http://authservice:9898/auth/v1/ping"  
+          auth_service_url: "http://authservice:9898/auth/v1/ping"
 
   - name: auth-service
     url: http://authservice:9898  
@@ -36,3 +36,6 @@ services:
           - /auth/v1
         strip_path: false
         preserve_host: false
+
+
+

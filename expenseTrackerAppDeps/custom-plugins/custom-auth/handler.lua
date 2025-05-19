@@ -31,8 +31,8 @@ function CustomAuthHandler:access(config)
 
     -- If authenticated, add user_id to headers and continue
     local user_id = res.body -- Assuming auth service returns user_id in body
-    kong.log.debug("Injecting header X-User-Id: ", user_id)
-    kong.service.request.set_header("X-User-Id", user_id)
+    kong.log.debug("Injecting header user-id: ", user_id)
+    kong.service.request.set_header("user-id", user_id)
 end
 
 return CustomAuthHandler

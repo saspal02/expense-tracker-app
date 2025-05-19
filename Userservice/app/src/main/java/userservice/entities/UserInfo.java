@@ -18,6 +18,7 @@ import lombok.Setter;
 @Table(name = "users")
 public class UserInfo
 {
+
     private Long id;
 
     @Id

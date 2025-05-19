@@ -35,9 +35,6 @@ public class ExpenseController {
     public ResponseEntity<Boolean> addExpenses(@RequestHeader(value = "user-id")@NonNull String userId,@RequestBody ExpenseDto expenseDto) {
         try {
             expenseDto.setUserId(userId);
-            System.out.println("user-id from header: " + userId);
-            System.out.println("ExpenseDto before saving: " + expenseDto);
-
             return new ResponseEntity<>(expenseService.createExpense(expenseDto), HttpStatus.OK);
 
         } catch (Exception ex) {

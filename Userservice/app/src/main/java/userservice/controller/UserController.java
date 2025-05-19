@@ -39,4 +39,11 @@ public class UserController {
         }
     }
 
+    @GetMapping("/health")
+    public ResponseEntity<Boolean> checkHealth(){
+        return new ResponseEntity<>(true, HttpStatus.OK);
+    }
+
+
+
 }
