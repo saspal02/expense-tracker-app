@@ -27,16 +27,9 @@ public class UserInfoDto
     @NonNull
     private String lastName;
 
-    @JsonProperty("phone_number")
-    @NonNull
-    private Long phoneNumber;
-
     @JsonProperty("email")
     @NonNull
     private String email;
-
-    @JsonProperty("profile_pic")
-    private String profilePic;
 
     public UserInfo transformToUserInfo() {
         return UserInfo.builder()
@@ -44,8 +37,7 @@ public class UserInfoDto
                 .lastName(lastName)
                 .userId(userId)
                 .email(email)
-                .profilePic(profilePic)
-                .phoneNumber(phoneNumber).build();
+                .build();
     }
 
 }

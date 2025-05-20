@@ -33,8 +33,8 @@ public class UserService {
         return mapToDto(userInfo);
     }
 
-    public UserInfoDto getUser(UserInfoDto userInfoDto) throws Exception {
-        Optional<UserInfo> userInfoDtoOpt = userRepository.findByUserId(userInfoDto.getUserId());
+    public UserInfoDto getUser(String userId) throws Exception {
+        Optional<UserInfo> userInfoDtoOpt = userRepository.findByUserId(userId);
         if (userInfoDtoOpt.isEmpty()) {
             throw new Exception("User not found");
         }
@@ -48,9 +48,8 @@ public class UserService {
                 userInfo.getUserId(),
                 userInfo.getFirstName(),
                 userInfo.getLastName(),
-                userInfo.getPhoneNumber(),
-                userInfo.getEmail(),
-                userInfo.getProfilePic()
+                userInfo.getEmail()
+
         );
     }
 

@@ -34,15 +34,8 @@ public class UserInfo
     @NonNull
     private String lastName;
 
-    @JsonProperty("phone_number")
-    @NonNull
-    private Long phoneNumber;
-
     @JsonProperty("email")
     @NonNull
     private String email;
-
-    @JsonProperty("profile_pic")
-    private String profilePic;
 
 }

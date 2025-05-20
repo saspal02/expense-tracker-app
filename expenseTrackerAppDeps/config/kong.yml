@@ -28,6 +28,20 @@ services:
         config:
           auth_service_url: "http://authservice:9898/auth/v1/ping"
 
+  - name: user-service
+    url: http://userservice:9810
+    routes:
+      - name: user-route
+        paths:
+          - /user/v1
+        strip_path: false
+        preserve_host: false
+    plugins:
+      - name: custom-auth
+        config:
+          auth_service_url: "http://authservice:9898/auth/v1/ping"
+
+
   - name: auth-service
     url: http://authservice:9898  
     routes:
