@@ -19,8 +19,6 @@ import lombok.Setter;
 public class UserInfo
 {
 
-    private Long id;
-
     @Id
     @JsonProperty("user_id")
     @NonNull
