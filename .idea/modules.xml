@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AuthService.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AuthService.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AuthService.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AuthService.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AuthService.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AuthService.app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Datascience-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Datascience-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Datascience-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Datascience-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Expense-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Expense-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Expense-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Expense-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Userservice.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Userservice.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Userservice.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Userservice.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Userservice.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Userservice.app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.saswat.Datascience-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.saswat.Datascience-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/expense-tracker-app.iml" filepath="$PROJECT_DIR$/.idea/expense-tracker-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.AuthService.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.AuthService.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.AuthService.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.AuthService.app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.Userservice.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.Userservice.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.Userservice.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/expense-tracker-app.Userservice.app.test.iml" />
     </modules>
   </component>
 </project>

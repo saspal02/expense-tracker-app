@@ -27,10 +27,11 @@ services:
     container_name: mysql-8.3.0
     restart: always
     environment:
-      MYSQL_USER: expenseuser
-      MYSQL_PASSWORD: "PASSWORD"
-      MYSQL_ROOT_USER: root
-      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
     ports:
       - "3306:3306"
     expose:
@@ -75,7 +76,7 @@ services:
   dsservice:
     image: ds-service
     env_file:
-      - ../Datascience-service/.env
+      - ../expenseTrackerAppDeps/.env
     container_name: ds-service
     ports:
       - '8010:8010'
