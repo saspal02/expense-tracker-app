@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.4
@@ -31,38 +33,33 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-
     ports:
       - "3306:3306"
     expose:
       - "3306"
     volumes:
       - mysql-db:/var/lib/mysql
-      
+
   userservice:
-    image: user-service
+    image: saspal02/user-service
     container_name: user-service
-    ports:
-    - '9810:9810'
     depends_on:
-    - kafka
-    - mysql
-    - authservice
-    
+      - kafka
+      - mysql
+      - authservice
+
+
   authservice:
-    image: auth-service
+    image: saspal02/auth-service
     container_name: auth-service
-    ports:
-    - '9898:9898'
     depends_on:
-    - kafka
-    - mysql
-   
+      - kafka
+      - mysql
+
+
   expenseservice:
-    image: expense-service
+    image: saspal02/expense-service
     container_name: expense-service
-    ports: 
-      - '9820:9820'
     environment:
       KAFKA_HOST: kafka
       KAFKA_PORT: 9092
@@ -73,13 +70,12 @@ services:
       - kafka
       - mysql
 
+
   dsservice:
-    image: ds-service
+    image: saspal02/ds-service
     env_file:
       - ../expenseTrackerAppDeps/.env
     container_name: ds-service
-    ports:
-      - '8010:8010'
     environment:
       KAFKA_HOST: kafka
       KAFKA_PORT: 9092
@@ -87,7 +83,8 @@ services:
       - kafka
       - mysql
       - expenseservice
-      - userservice 
+      - userservice
+    # no ports exposed
 
   kong-service:
     image: kong:latest
@@ -107,7 +104,6 @@ services:
       KONG_LUA_PACKAGE_PATH: ".kong//usr/local/share/lua/5.1/?.lua;;"
     depends_on:
       - authservice
-
     ports:
       - "8000:8000/tcp"
       - "127.0.0.1:7990:8001/tcp"
@@ -117,5 +113,3 @@ services:
 volumes:
   mysql-db:
     driver: local
-
-    
