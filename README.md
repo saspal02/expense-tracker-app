@@ -73,8 +73,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 **EaseExpense** is an AI-powered expense tracker app designed to simplify your financial management by **automatically capturing your expenses from incoming SMS messages**.
 
 ### How it works:
