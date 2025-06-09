@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   zookeeper:
@@ -28,11 +28,11 @@ services:
     image: mysql:8.3.0
     container_name: mysql-8.3.0
     restart: always
+    env_file:
+      - .env
     environment:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
       - "3306:3306"
     expose:
@@ -43,24 +43,36 @@ services:
   userservice:
     image: saspal02/user-service
     container_name: user-service
+    env_file:
+      - .env
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     depends_on:
       - kafka
       - mysql
       - authservice
 
-
   authservice:
     image: saspal02/auth-service
     container_name: auth-service
+    env_file:
+      - .env
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     depends_on:
       - kafka
       - mysql
 
-
   expenseservice:
     image: saspal02/expense-service
     container_name: expense-service
+    env_file:
+      - .env
     environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       KAFKA_HOST: kafka
       KAFKA_PORT: 9092
       MYSQL_HOST: mysql
@@ -70,13 +82,14 @@ services:
       - kafka
       - mysql
 
-
   dsservice:
     image: saspal02/ds-service
-    env_file:
-      - ../expenseTrackerAppDeps/.env
     container_name: ds-service
+    env_file:
+      - .env
     environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       KAFKA_HOST: kafka
       KAFKA_PORT: 9092
     depends_on:
@@ -84,7 +97,6 @@ services:
       - mysql
       - expenseservice
       - userservice
-    # no ports exposed
 
   kong-service:
     image: kong:latest
