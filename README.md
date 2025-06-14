@@ -146,7 +146,7 @@ Navigate to expenseTrackerApp and up your containers to test it
    docker compose up -d
    ```
 
-To test in the frontend, refer to this [Link](https://github.com/saspal02/expense-tracker-rn)_
+To test in the frontend, refer to this [Link](https://github.com/saspal02/expense-tracker-rn)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +159,7 @@ To test in the frontend, refer to this [Link](https://github.com/saspal02/expens
 - [x] Add Logout feature
 - [ ] Add Additional UI
 - [ ] Add category level expenses
-
+- [ ] Deploy the project in AWS
 
 See the [open issues](https://github.com/saspal02/expense-tracker-app/issues) for a full list of proposed features (and known issues).
 
@@ -169,12 +169,12 @@ See the [open issues](https://github.com/saspal02/expense-tracker-app/issues) fo
 <!-- CONTACT -->
 ## Contact
 
-Saswat Pal - [@saspal02](https://twitter.com/saspal02) - email@example.com
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/saspal02)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saswat-pal/)
 
-Project Link: [https://github.com/saspal02/expense-tracker-app](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/saspal02/expense-tracker-app](https://github.com/saspal02/expense-tracker-app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
