@@ -174,10 +174,7 @@ See the [open issues](https://github.com/saspal02/expense-tracker-app/issues) fo
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/saspal02)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saswat-pal/)
 
-Project Link: [https://github.com/saspal02/expense-tracker-app](https://github.com/saspal02/expense-tracker-app)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
