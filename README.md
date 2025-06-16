@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/saspal02/expense-tracker-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">EaseExpense</h3>
@@ -83,6 +83,10 @@
 
 With EaseExpense, managing your expenses becomes effortless and accurate, helping you stay on top of your budget without the hassle of manual tracking.
 
+## Project structure
+![Project Structure](./images/expensetrackerapp.png)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -135,8 +139,6 @@ Make sure you have the following tools and credentials:
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
