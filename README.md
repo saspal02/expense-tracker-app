@@ -34,7 +34,7 @@
     <a href="https://github.com/saspal02/expense-tracker-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/saspal02/expense-tracker-app">View Demo</a>
+    <a href="https://github.com/user-attachments/assets/6f8f0e0e-6300-4014-87ab-8b6a29061d65">View Demo</a>
     &middot;
     <a href="https://github.com/saspal02/expense-tracker-app/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
